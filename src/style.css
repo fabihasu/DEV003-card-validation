@@ -1,0 +1,21 @@
+h1 {
+ font-style: normal;
+}
+
+label {
+ font-size: 20px;
+}
+
+input {
+ border-style: double;
+ margin: 25px;
+ width: 500px;
+background-color: rgb(237, 237, 108);
+
+}
+
+button{
+font-size: 20px;
+font-style: oblique;
+
+}
