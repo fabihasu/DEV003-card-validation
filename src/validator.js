@@ -1,5 +1,5 @@
 const validator = {
-  // ...
+  
   isValid(numerotarjeta) {
     let num = []; 
     num = Array.from(String(numerotarjeta), Number);  
@@ -28,24 +28,18 @@ const validator = {
   },
 
   maskify(numerotarjeta) {
-    const largodenumerodetarjeta = numerotarjeta.length // guardo el tamanho de mi numero de tarjeta       
-    let gatitos = "" // creo variable tipo string vacia
-    if (largodenumerodetarjeta > 4) { //si tengo mas de 4 digitos, entonces enmascaro
-      for(let i=0; i < largodenumerodetarjeta - 4; i++) { // recorro mis numeros hasta el largo menos 4,
-        gatitos = gatitos + "#" // guardo un gatito por cada repeticion del for
+    const largodenumerodetarjeta = numerotarjeta.length 
+    let gatitos = "" 
+    if (largodenumerodetarjeta > 4) { 
+      for(let i=0; i < largodenumerodetarjeta - 4; i++) { 
+        gatitos = gatitos + "#" 
       }
-      const ultimos4digitos = numerotarjeta.slice(-4) // guardo los ultimos 4 digitos
-      const tarjetaenmascarada = gatitos + ultimos4digitos // concateno los dos string, los gatitos y los ultimos 4 digitos
-      return tarjetaenmascarada // retorno mi numero enmascarado
+      const ultimos4digitos = numerotarjeta.slice(-4) 
+      const tarjetaenmascarada = gatitos + ultimos4digitos 
+      return tarjetaenmascarada 
     } else {
-      return numerotarjeta // retorno mi mismo numero cuando tengo 4 o menos digitos
+      return numerotarjeta 
     }
-    //criar uma variavel que mostre somente os últimos quatro caracteres . substring
-    //criar outra variavel que mostre o resto dos números,substituindo pelo símbolo que quero mostrar
-    //concatenar as variaveis
-    //alert que mostre isso....primeira versão
-
-
   }
 };
 
